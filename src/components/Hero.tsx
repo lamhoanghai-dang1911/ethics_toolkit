@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { FC } from 'react';
-import { ArrowRight, Scale, AlertCircle, CheckCircle2, ShieldCheck, Cpu } from 'lucide-react';
+import { ArrowRight, Scale, AlertCircle, ShieldCheck, Cpu } from 'lucide-react';
 
 interface HeroProps {
   onStartToolkit: () => void;
