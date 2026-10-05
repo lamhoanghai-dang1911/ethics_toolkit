@@ -58,15 +58,14 @@ export const Navbar: FC<NavbarProps> = ({
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-cream-100/95 backdrop-blur-md border-b border-academic-border/80 py-2.5 shadow-subtle'
-          : 'bg-cream-50/90 backdrop-blur-sm border-b border-academic-border/50 py-3 sm:py-3.5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+        ? 'bg-cream-100/95 backdrop-blur-md border-b border-academic-border/80 py-2.5 shadow-subtle'
+        : 'bg-cream-50/90 backdrop-blur-sm border-b border-academic-border/50 py-3 sm:py-3.5'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2 lg:gap-4">
-          
+
           {/* Logo & Course Badge */}
           <a
             href="#"
@@ -76,8 +75,8 @@ export const Navbar: FC<NavbarProps> = ({
               BỘ CÔNG CỤ ĐẠO ĐỨC AI
             </span>
             <span className="text-[10px] uppercase font-mono tracking-wider text-charcoal-500 block mt-1 whitespace-nowrap">
-              <span className="hidden xl:inline">HCM202 • Đạo đức & Tu dưỡng trong thời đại AI</span>
-              <span className="xl:hidden inline">HCM202 • Đạo đức AI</span>
+              <span className="hidden xl:inline">Đạo đức & Tu dưỡng trong thời đại AI</span>
+              <span className="xl:hidden inline">Đạo đức AI</span>
             </span>
           </a>
 
@@ -90,20 +89,18 @@ export const Navbar: FC<NavbarProps> = ({
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`px-2.5 xl:px-3 py-1.5 rounded-full text-xs font-mono whitespace-nowrap transition-all duration-150 relative flex items-center gap-1.5 shrink-0 ${
-                    isActive
-                      ? 'bg-burgundy text-white font-bold shadow-sm'
-                      : 'text-charcoal-700 hover:text-burgundy hover:bg-burgundy-50 font-medium'
-                  }`}
+                  className={`px-2.5 xl:px-3 py-1.5 rounded-full text-xs font-mono whitespace-nowrap transition-all duration-150 relative flex items-center gap-1.5 shrink-0 ${isActive
+                    ? 'bg-burgundy text-white font-bold shadow-sm'
+                    : 'text-charcoal-700 hover:text-burgundy hover:bg-burgundy-50 font-medium'
+                    }`}
                 >
                   <span className="whitespace-nowrap">{link.label}</span>
                   {link.badge && (
                     <span
-                      className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono transition-colors shrink-0 ${
-                        isActive
-                          ? 'bg-white text-burgundy font-bold'
-                          : 'bg-burgundy text-white'
-                      }`}
+                      className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono transition-colors shrink-0 ${isActive
+                        ? 'bg-white text-burgundy font-bold'
+                        : 'bg-burgundy text-white'
+                        }`}
                     >
                       {link.badge}
                     </span>
@@ -150,18 +147,16 @@ export const Navbar: FC<NavbarProps> = ({
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-3 py-2 rounded-md text-sm transition-colors flex items-center justify-between ${
-                    isActive
-                      ? 'bg-burgundy text-white font-bold'
-                      : 'text-charcoal hover:text-burgundy hover:bg-burgundy-50 font-medium'
-                  }`}
+                  className={`px-3 py-2 rounded-md text-sm transition-colors flex items-center justify-between ${isActive
+                    ? 'bg-burgundy text-white font-bold'
+                    : 'text-charcoal hover:text-burgundy hover:bg-burgundy-50 font-medium'
+                    }`}
                 >
                   <span>{link.label}</span>
                   {link.badge && (
                     <span
-                      className={`text-[10px] px-2 py-0.5 rounded-full font-mono ${
-                        isActive ? 'bg-white text-burgundy font-bold' : 'bg-burgundy text-white'
-                      }`}
+                      className={`text-[10px] px-2 py-0.5 rounded-full font-mono ${isActive ? 'bg-white text-burgundy font-bold' : 'bg-burgundy text-white'
+                        }`}
                     >
                       {link.badge}
                     </span>

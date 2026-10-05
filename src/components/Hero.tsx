@@ -27,7 +27,7 @@ export const Hero: FC<HeroProps> = ({
             {/* Small Label */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-burgundy-50 border border-burgundy-200/80 text-burgundy-700 text-xs font-mono font-semibold tracking-wider uppercase">
               <span className="w-2 h-2 rounded-full bg-burgundy animate-pulse" />
-              <span>HCM202 • ĐẠO ĐỨC TRONG THỜI ĐẠI TRÍ TUỆ NHÂN TẠO</span>
+              <span>ĐẠO ĐỨC TRONG THỜI ĐẠI TRÍ TUỆ NHÂN TẠO</span>
             </div>
 
             {/* Large Headline */}
@@ -231,7 +231,7 @@ export const Hero: FC<HeroProps> = ({
         <div className="mt-16 sm:mt-20 pt-10 border-t border-academic-border">
           <div className="max-w-4xl mx-auto text-center space-y-3">
             <span className="text-xs font-mono uppercase tracking-widest text-burgundy font-semibold block">
-              TRIẾT LÝ NỀN TẢNG HCM202
+              TRIẾT LÝ NỀN TẢNG
             </span>
             <blockquote className="font-serif text-2xl sm:text-3xl md:text-4xl text-charcoal font-semibold leading-snug">
               “AI có thể hỗ trợ quá trình học.
@@ -240,9 +240,9 @@ export const Hero: FC<HeroProps> = ({
                 Nhưng AI không thể thay thế trách nhiệm của người học.
               </span>”
             </blockquote>
-            <p className="text-sm font-mono text-charcoal-500 pt-2">
-              HCM202 — Khi câu trả lời trở nên miễn phí, sự trung thực và tự rèn luyện là vô giá.
-            </p>
+            {/* <p className="text-sm font-mono text-charcoal-500 pt-2">
+              Khi câu trả lời trở nên miễn phí, sự trung thực và tự rèn luyện là vô giá.
+            </p> */}
           </div>
         </div>
       </div>
