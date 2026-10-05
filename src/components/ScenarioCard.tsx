@@ -18,7 +18,7 @@ export const ScenarioCard: FC<ScenarioCardProps> = ({
   return (
     <div
       onClick={() => onOpen(scenario.id)}
-      className="group bg-white rounded-2xl border border-academic-border p-6 sm:p-7 hover:border-burgundy/60 transition-all duration-300 shadow-subtle hover:shadow-academic cursor-pointer flex flex-col justify-between text-left relative overflow-hidden"
+      className="group bg-white rounded-2xl border border-academic-border p-6 sm:p-7 hover:border-burgundy/60 transition-all duration-300 shadow-subtle hover:shadow-academic cursor-pointer flex flex-col justify-between text-left relative overflow-hidden w-full h-full"
     >
       {/* Top indicator bar if answered */}
       {isAnswered && (
