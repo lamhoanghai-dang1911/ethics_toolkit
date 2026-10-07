@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { FC } from 'react';
-import { Cpu, User, ArrowLeftRight, Check, Sparkles } from 'lucide-react';
+import { Cpu, User, ArrowLeftRight, Check } from 'lucide-react';
 
 interface ValuePair {
   ai: string;
@@ -132,8 +132,8 @@ export const HumanValue: FC = () => {
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
                   className={`py-4 sm:py-5 transition-all duration-200 rounded-xl px-2 sm:px-4 cursor-pointer ${isHovered
-                      ? 'bg-burgundy-50/40 ring-1 ring-burgundy-200'
-                      : 'hover:bg-cream-100/60'
+                    ? 'bg-burgundy-50/40 ring-1 ring-burgundy-200'
+                    : 'hover:bg-cream-100/60'
                     }`}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
@@ -153,8 +153,8 @@ export const HumanValue: FC = () => {
                     <div className="md:col-span-2 flex items-center justify-center">
                       <div
                         className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isHovered
-                            ? 'bg-burgundy text-white scale-110'
-                            : 'bg-cream-200 text-charcoal-400'
+                          ? 'bg-burgundy text-white scale-110'
+                          : 'bg-cream-200 text-charcoal-400'
                           }`}
                       >
                         <ArrowLeftRight className="w-4 h-4" />

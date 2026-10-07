@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FC } from 'react';
 import { FRAMEWORK_STEPS } from '../data/framework';
-import { CheckSquare, ArrowDown, ShieldAlert, Sparkles, ChevronRight } from 'lucide-react';
+import { CheckSquare, ArrowDown, ShieldAlert, ChevronRight } from 'lucide-react';
 
 export const Framework: FC = () => {
   const [activeStep, setActiveStep] = useState<number>(3); // Mặc định ở Bước 04: Gánh vác trách nhiệm
