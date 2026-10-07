@@ -9,7 +9,7 @@ export const Framework: FC = () => {
   return (
     <section id="framework" className="py-20 md:py-28 bg-white border-b border-academic-border scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-200 border border-academic-border text-xs font-mono font-medium text-charcoal-700">
@@ -20,14 +20,14 @@ export const Framework: FC = () => {
             4 CÂU HỎI TỰ VẤN TRƯỚC KHI TIN DÙNG AI
           </h2>
 
-          <p className="text-base sm:text-lg text-charcoal-600 font-sans max-w-2xl mx-auto">
+          {/* <p className="text-base sm:text-lg text-charcoal-600 font-sans max-w-2xl mx-auto">
             Quy trình tự vấn 4 bước dành cho sinh viên trước khi quyết định đưa bất kỳ nội dung do AI tạo ra vào bài tập, báo cáo hay bài thuyết trình.
-          </p>
+          </p> */}
         </div>
 
         {/* 4 Steps Interactive Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
-          
+
           {/* Left Column: Visual Flow (HỎI ↓ KIỂM ↓ THẤU ↓ NHẬN) */}
           <div className="lg:col-span-5 space-y-3">
             {FRAMEWORK_STEPS.map((step, idx) => {
@@ -38,28 +38,26 @@ export const Framework: FC = () => {
                 <div key={step.number} className="relative">
                   <div
                     onClick={() => setActiveStep(idx)}
-                    className={`rounded-2xl p-4 sm:p-5 border cursor-pointer transition-all duration-300 flex items-center justify-between ${
-                      isOwn
-                        ? isActive
-                          ? 'bg-burgundy text-white border-burgundy shadow-elevated scale-[1.02]'
-                          : 'bg-burgundy-50 border-burgundy-300 text-burgundy-950 hover:bg-burgundy-100'
-                        : isActive
+                    className={`rounded-2xl p-4 sm:p-5 border cursor-pointer transition-all duration-300 flex items-center justify-between ${isOwn
+                      ? isActive
+                        ? 'bg-burgundy text-white border-burgundy shadow-elevated scale-[1.02]'
+                        : 'bg-burgundy-50 border-burgundy-300 text-burgundy-950 hover:bg-burgundy-100'
+                      : isActive
                         ? 'bg-charcoal text-white border-charcoal shadow-academic scale-[1.02]'
                         : 'bg-cream-50 border-academic-border hover:bg-cream-100 text-charcoal'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center gap-4">
                       {/* Step Number Badge */}
                       <span
-                        className={`w-9 h-9 rounded-xl font-mono text-sm font-bold flex items-center justify-center shrink-0 ${
-                          isOwn
-                            ? isActive
-                              ? 'bg-white text-burgundy'
-                              : 'bg-burgundy text-white'
-                            : isActive
+                        className={`w-9 h-9 rounded-xl font-mono text-sm font-bold flex items-center justify-center shrink-0 ${isOwn
+                          ? isActive
+                            ? 'bg-white text-burgundy'
+                            : 'bg-burgundy text-white'
+                          : isActive
                             ? 'bg-white text-charcoal'
                             : 'bg-cream-200 text-charcoal'
-                        }`}
+                          }`}
                       >
                         {step.number}
                       </span>
@@ -67,26 +65,23 @@ export const Framework: FC = () => {
                       <div className="text-left">
                         <div className="flex items-center gap-2">
                           <span
-                            className={`font-mono text-xs font-bold tracking-wider uppercase ${
-                              isOwn && !isActive ? 'text-burgundy' : ''
-                            }`}
+                            className={`font-mono text-xs font-bold tracking-wider uppercase ${isOwn && !isActive ? 'text-burgundy' : ''
+                              }`}
                           >
                             {step.keyword}
                           </span>
                           {isOwn && (
                             <span
-                              className={`text-[10px] font-mono px-2 py-0.2 rounded-full uppercase font-bold ${
-                                isActive ? 'bg-burgundy-900 text-burgundy-100' : 'bg-burgundy text-white'
-                              }`}
+                              className={`text-[10px] font-mono px-2 py-0.2 rounded-full uppercase font-bold ${isActive ? 'bg-burgundy-900 text-burgundy-100' : 'bg-burgundy text-white'
+                                }`}
                             >
                               ★ ĐIỂM CHỐT TRÁCH NHIỆM
                             </span>
                           )}
                         </div>
                         <div
-                          className={`font-serif text-base sm:text-lg font-bold leading-snug ${
-                            isActive ? 'text-white' : 'text-charcoal'
-                          }`}
+                          className={`font-serif text-base sm:text-lg font-bold leading-snug ${isActive ? 'text-white' : 'text-charcoal'
+                            }`}
                         >
                           “{step.question}”
                         </div>
@@ -94,9 +89,8 @@ export const Framework: FC = () => {
                     </div>
 
                     <ChevronRight
-                      className={`w-5 h-5 shrink-0 transition-transform ${
-                        isActive ? 'translate-x-1' : 'opacity-40'
-                      }`}
+                      className={`w-5 h-5 shrink-0 transition-transform ${isActive ? 'translate-x-1' : 'opacity-40'
+                        }`}
                     />
                   </div>
 
@@ -119,11 +113,10 @@ export const Framework: FC = () => {
 
               return (
                 <div
-                  className={`rounded-3xl p-6 sm:p-8 border shadow-academic transition-all text-left space-y-6 ${
-                    isOwn
-                      ? 'bg-cream-50 border-burgundy-300 ring-2 ring-burgundy/20'
-                      : 'bg-white border-academic-border'
-                  }`}
+                  className={`rounded-3xl p-6 sm:p-8 border shadow-academic transition-all text-left space-y-6 ${isOwn
+                    ? 'bg-cream-50 border-burgundy-300 ring-2 ring-burgundy/20'
+                    : 'bg-white border-academic-border'
+                    }`}
                 >
                   {/* Step Header */}
                   <div className="flex items-center justify-between pb-4 border-b border-academic-border">
@@ -166,16 +159,15 @@ export const Framework: FC = () => {
                   </div>
 
                   {/* Action Rule Capsule */}
-                  <div
-                    className={`p-4 rounded-xl border text-xs sm:text-sm font-mono flex items-center gap-3 ${
-                      isOwn
-                        ? 'bg-burgundy text-white border-burgundy'
-                        : 'bg-cream-200 border-academic-border text-charcoal'
-                    }`}
+                  {/* <div
+                    className={`p-4 rounded-xl border text-xs sm:text-sm font-mono flex items-center gap-3 ${isOwn
+                      ? 'bg-burgundy text-white border-burgundy'
+                      : 'bg-cream-200 border-academic-border text-charcoal'
+                      }`}
                   >
                     <Sparkles className="w-4 h-4 shrink-0" />
                     <span>{current.actionPrompt}</span>
-                  </div>
+                  </div> */}
                 </div>
               );
             })()}

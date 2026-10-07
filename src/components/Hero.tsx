@@ -25,10 +25,10 @@ export const Hero: FC<HeroProps> = ({
           {/* Left Column: Typography & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Small Label */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-burgundy-50 border border-burgundy-200/80 text-burgundy-700 text-xs font-mono font-semibold tracking-wider uppercase">
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-burgundy-50 border border-burgundy-200/80 text-burgundy-700 text-xs font-mono font-semibold tracking-wider uppercase">
               <span className="w-2 h-2 rounded-full bg-burgundy animate-pulse" />
               <span>ĐẠO ĐỨC TRONG THỜI ĐẠI TRÍ TUỆ NHÂN TẠO</span>
-            </div>
+            </div> */}
 
             {/* Large Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-charcoal tracking-tight leading-[1.12]">

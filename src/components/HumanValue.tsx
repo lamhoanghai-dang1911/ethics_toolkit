@@ -61,7 +61,7 @@ export const HumanValue: FC = () => {
   return (
     <section id="human-value" className="py-20 md:py-28 bg-cream-50 border-b border-academic-border scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-burgundy-50 border border-burgundy-200 text-xs font-mono font-semibold text-burgundy">
@@ -80,7 +80,7 @@ export const HumanValue: FC = () => {
 
         {/* Interactive Comparison Matrix */}
         <div className="bg-white rounded-3xl border border-academic-border p-6 sm:p-8 lg:p-10 shadow-academic">
-          
+
           {/* Header of the 2 columns + Center Badge */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 pb-6 border-b border-academic-border items-center">
             {/* Left Header */}
@@ -131,14 +131,13 @@ export const HumanValue: FC = () => {
                   key={idx}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`py-4 sm:py-5 transition-all duration-200 rounded-xl px-2 sm:px-4 cursor-pointer ${
-                    isHovered
+                  className={`py-4 sm:py-5 transition-all duration-200 rounded-xl px-2 sm:px-4 cursor-pointer ${isHovered
                       ? 'bg-burgundy-50/40 ring-1 ring-burgundy-200'
                       : 'hover:bg-cream-100/60'
-                  }`}
+                    }`}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-                    
+
                     {/* Left: AI CAN */}
                     <div className="md:col-span-5 text-left">
                       <div className="font-mono text-sm sm:text-base font-bold text-charcoal flex items-center gap-2">
@@ -153,11 +152,10 @@ export const HumanValue: FC = () => {
                     {/* Center Icon */}
                     <div className="md:col-span-2 flex items-center justify-center">
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                          isHovered
+                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isHovered
                             ? 'bg-burgundy text-white scale-110'
                             : 'bg-cream-200 text-charcoal-400'
-                        }`}
+                          }`}
                       >
                         <ArrowLeftRight className="w-4 h-4" />
                       </div>
@@ -177,12 +175,12 @@ export const HumanValue: FC = () => {
                   </div>
 
                   {/* Expanded Synergy Note on Hover */}
-                  {isHovered && (
+                  {/* {isHovered && (
                     <div className="mt-3 pt-3 border-t border-burgundy-100 flex items-center justify-center gap-2 text-xs font-mono text-burgundy-900 bg-white/80 p-2.5 rounded-lg animate-fadeIn">
                       <Sparkles className="w-3.5 h-3.5 text-burgundy shrink-0" />
                       <span>{pair.synergy}</span>
                     </div>
-                  )}
+                  )} */}
                 </div>
               );
             })}

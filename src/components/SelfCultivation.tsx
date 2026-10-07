@@ -50,11 +50,11 @@ export const SelfCultivation: FC = () => {
   return (
     <section id="cultivation" className="py-20 md:py-28 bg-white border-b border-academic-border scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-200 border border-academic-border text-xs font-mono font-medium text-charcoal-700">
-            <span>NỀN TẢNG TU DƯỠNG HCM202</span>
+            <span>NỀN TẢNG TU DƯỠNG</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal tracking-tight">
@@ -68,7 +68,7 @@ export const SelfCultivation: FC = () => {
 
         {/* 3 Dimensions Grid / Triangle Visual */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
-          
+
           {/* Visual Triangle Diagram */}
           <div className="lg:col-span-5 bg-cream-50 p-6 sm:p-8 rounded-3xl border border-academic-border text-center relative overflow-hidden shadow-subtle">
             <span className="font-mono text-[11px] text-charcoal-400 uppercase tracking-wider block mb-6">
@@ -102,11 +102,10 @@ export const SelfCultivation: FC = () => {
               {/* Vertex 1: Năng lực (Top) */}
               <button
                 onClick={() => setActiveDimension('ability')}
-                className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 px-3 py-1.5 rounded-xl border text-xs font-mono font-bold transition-all shadow-subtle ${
-                  activeDimension === 'ability'
-                    ? 'bg-burgundy text-white border-burgundy scale-105 shadow-academic'
-                    : 'bg-white text-charcoal border-academic-border hover:border-burgundy'
-                }`}
+                className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 px-3 py-1.5 rounded-xl border text-xs font-mono font-bold transition-all shadow-subtle ${activeDimension === 'ability'
+                  ? 'bg-burgundy text-white border-burgundy scale-105 shadow-academic'
+                  : 'bg-white text-charcoal border-academic-border hover:border-burgundy'
+                  }`}
               >
                 ▲ NĂNG LỰC
               </button>
@@ -114,11 +113,10 @@ export const SelfCultivation: FC = () => {
               {/* Vertex 2: Nhận thức (Bottom Left) */}
               <button
                 onClick={() => setActiveDimension('awareness')}
-                className={`absolute bottom-0 left-0 translate-y-2 px-3 py-1.5 rounded-xl border text-xs font-mono font-bold transition-all shadow-subtle ${
-                  activeDimension === 'awareness'
-                    ? 'bg-burgundy text-white border-burgundy scale-105 shadow-academic'
-                    : 'bg-white text-charcoal border-academic-border hover:border-burgundy'
-                }`}
+                className={`absolute bottom-0 left-0 translate-y-2 px-3 py-1.5 rounded-xl border text-xs font-mono font-bold transition-all shadow-subtle ${activeDimension === 'awareness'
+                  ? 'bg-burgundy text-white border-burgundy scale-105 shadow-academic'
+                  : 'bg-white text-charcoal border-academic-border hover:border-burgundy'
+                  }`}
               >
                 ◀ NHẬN THỨC
               </button>
@@ -126,11 +124,10 @@ export const SelfCultivation: FC = () => {
               {/* Vertex 3: Trách nhiệm (Bottom Right) */}
               <button
                 onClick={() => setActiveDimension('responsibility')}
-                className={`absolute bottom-0 right-0 translate-y-2 px-3 py-1.5 rounded-xl border text-xs font-mono font-bold transition-all shadow-subtle ${
-                  activeDimension === 'responsibility'
-                    ? 'bg-burgundy text-white border-burgundy scale-105 shadow-academic'
-                    : 'bg-white text-charcoal border-academic-border hover:border-burgundy'
-                }`}
+                className={`absolute bottom-0 right-0 translate-y-2 px-3 py-1.5 rounded-xl border text-xs font-mono font-bold transition-all shadow-subtle ${activeDimension === 'responsibility'
+                  ? 'bg-burgundy text-white border-burgundy scale-105 shadow-academic'
+                  : 'bg-white text-charcoal border-academic-border hover:border-burgundy'
+                  }`}
               >
                 TRÁCH NHIỆM ▶
               </button>
@@ -151,11 +148,10 @@ export const SelfCultivation: FC = () => {
                 <div
                   key={dim.id}
                   onClick={() => setActiveDimension(dim.id)}
-                  className={`rounded-2xl p-5 sm:p-6 border transition-all duration-200 cursor-pointer text-left ${
-                    isSelected
-                      ? 'bg-cream-50 border-burgundy shadow-academic ring-1 ring-burgundy'
-                      : 'bg-white border-academic-border hover:bg-cream-100/50'
-                  }`}
+                  className={`rounded-2xl p-5 sm:p-6 border transition-all duration-200 cursor-pointer text-left ${isSelected
+                    ? 'bg-cream-50 border-burgundy shadow-academic ring-1 ring-burgundy'
+                    : 'bg-white border-academic-border hover:bg-cream-100/50'
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
@@ -168,7 +164,7 @@ export const SelfCultivation: FC = () => {
                       </span>
                     </div>
                     <span className="text-xs font-mono text-charcoal-500 font-medium">
-                      #{dim.tag}
+                      {dim.tag}
                     </span>
                   </div>
 

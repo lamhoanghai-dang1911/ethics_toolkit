@@ -31,16 +31,16 @@ export const ScenarioCard: FC<ScenarioCardProps> = ({
           <span className="font-mono text-xs font-bold text-burgundy bg-burgundy-50 border border-burgundy-100 px-2.5 py-1 rounded-md">
             TÌNH HUỐNG {scenario.number}
           </span>
-          <div className="flex items-center gap-1.5 flex-wrap">
+          {/* <div className="flex items-center gap-1.5 flex-wrap">
             {scenario.tags.map((tag, idx) => (
               <span
                 key={idx}
                 className="text-[10px] font-mono text-charcoal-500 bg-cream-200 px-2 py-0.5 rounded-full"
               >
-                #{tag}
+                {tag}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Title & Subtitle */}
@@ -60,7 +60,7 @@ export const ScenarioCard: FC<ScenarioCardProps> = ({
       {/* Trade-off pill & CTA */}
       <div className="space-y-4 pt-4 border-t border-academic-border/70">
         {/* Trade-off indicator */}
-        <div className="p-2.5 bg-cream-100 rounded-xl border border-academic-border/60">
+        {/* <div className="p-2.5 bg-cream-100 rounded-xl border border-academic-border/60">
           <div className="text-[10px] font-mono uppercase tracking-wider text-charcoal-400 mb-1">
             Xung đột đánh đổi cốt lõi:
           </div>
@@ -69,7 +69,7 @@ export const ScenarioCard: FC<ScenarioCardProps> = ({
             <span className="text-burgundy">↔</span>
             <span>{scenario.tradeOff.right}</span>
           </div>
-        </div>
+        </div> */}
 
         {/* Action Button & Status */}
         <div className="flex items-center justify-between pt-1">

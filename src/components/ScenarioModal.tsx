@@ -95,7 +95,7 @@ export const ScenarioModal: FC<ScenarioModalProps> = ({
       aria-modal="true"
     >
       <div className="bg-cream-50 w-full max-w-6xl max-h-[94vh] rounded-3xl border border-academic-border shadow-2xl flex flex-col overflow-hidden text-left relative">
-        
+
         {/* Top Header & Progress */}
         <div className="px-6 py-4 bg-white border-b border-academic-border flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -154,13 +154,13 @@ export const ScenarioModal: FC<ScenarioModalProps> = ({
         {/* Modal Body: 3 Columns Desktop / Stacked Mobile */}
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-            
+
             {/* COLUMN 1 (LEFT): Scenario Context & Situation */}
             <div className="lg:col-span-4 space-y-5">
               <div className="bg-white rounded-2xl p-5 border border-academic-border shadow-subtle space-y-4">
                 <div className="flex items-center justify-between text-xs font-mono text-charcoal-400">
-                  <span>BƯỚC 01 • BỐI CẢNH</span>
-                  <span className="text-burgundy font-semibold">TÌNH HUỐNG THỰC TẾ</span>
+                  <span>BỐI CẢNH</span>
+                  {/* <span className="text-burgundy font-semibold">TÌNH HUỐNG THỰC TẾ</span> */}
                 </div>
 
                 <div className="p-4 bg-cream-100 rounded-xl border border-academic-border/70 font-sans text-sm sm:text-base text-charcoal-800 leading-relaxed font-normal">
@@ -176,7 +176,7 @@ export const ScenarioModal: FC<ScenarioModalProps> = ({
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-academic-border/70">
+                {/* <div className="pt-2 border-t border-academic-border/70">
                   <div className="text-[11px] font-mono text-charcoal-500 mb-1">
                     Căng thẳng đạo đức tiềm ẩn:
                   </div>
@@ -185,15 +185,15 @@ export const ScenarioModal: FC<ScenarioModalProps> = ({
                     <span className="text-burgundy">⚡</span>
                     <span>{scenario.tradeOff.right}</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* COLUMN 2 (CENTER): Decision Choices (A, B, C, D) */}
             <div className="lg:col-span-4 space-y-4">
               <div className="flex items-center justify-between text-xs font-mono text-charcoal-500 px-1">
-                <span>BƯỚC 02 • QUYẾT ĐỊNH CỦA BẠN</span>
-                <span>CHỌN 1 TRONG 4 PHƯƠNG ÁN</span>
+                <span>QUYẾT ĐỊNH CỦA BẠN</span>
+                {/* <span>CHỌN 1 TRONG 4 PHƯƠNG ÁN</span> */}
               </div>
 
               <div className="space-y-3">
@@ -204,18 +204,16 @@ export const ScenarioModal: FC<ScenarioModalProps> = ({
                     <button
                       key={choice.id}
                       onClick={() => handlePickChoice(choice.id)}
-                      className={`w-full p-4 rounded-xl border text-left transition-all duration-200 relative flex items-start gap-3 group ${
-                        isSelected
-                          ? 'bg-burgundy-50 border-burgundy ring-2 ring-burgundy shadow-sm'
-                          : 'bg-white hover:bg-cream-100 border-academic-border hover:border-charcoal-300'
-                      }`}
+                      className={`w-full p-4 rounded-xl border text-left transition-all duration-200 relative flex items-start gap-3 group ${isSelected
+                        ? 'bg-burgundy-50 border-burgundy ring-2 ring-burgundy shadow-sm'
+                        : 'bg-white hover:bg-cream-100 border-academic-border hover:border-charcoal-300'
+                        }`}
                     >
                       <div
-                        className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono font-bold text-xs shrink-0 transition-colors ${
-                          isSelected
-                            ? 'bg-burgundy text-white'
-                            : 'bg-cream-200 text-charcoal group-hover:bg-charcoal group-hover:text-white'
-                        }`}
+                        className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono font-bold text-xs shrink-0 transition-colors ${isSelected
+                          ? 'bg-burgundy text-white'
+                          : 'bg-cream-200 text-charcoal group-hover:bg-charcoal group-hover:text-white'
+                          }`}
                       >
                         {choice.id}
                       </div>
@@ -242,7 +240,7 @@ export const ScenarioModal: FC<ScenarioModalProps> = ({
             {/* COLUMN 3 (RIGHT): Reflection & Trade-off Reveal */}
             <div className="lg:col-span-4 space-y-4">
               <div className="flex items-center justify-between text-xs font-mono text-charcoal-500 px-1">
-                <span>BƯỚC 03 & 04 • BÓC TÁCH ĐÁNH ĐỔI</span>
+                <span>BÓC TÁCH ĐÁNH ĐỔI</span>
                 {userChoiceId && <span className="text-burgundy font-bold">ĐÃ MỞ KHÓA</span>}
               </div>
 
